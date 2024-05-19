@@ -1,0 +1,13 @@
+@import "../mixins";
+
+.socials {
+  @include reset-list;
+  display: flex;
+  gap: 30px;
+
+  &-icon {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+  }
+}
