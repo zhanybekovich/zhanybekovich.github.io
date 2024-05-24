@@ -1,0 +1,41 @@
+@import "../vars";
+
+.about {
+  padding-bottom: 100px;
+  background-color: $brand-beige;
+
+  &-container {
+    @media screen and (min-width: 1024px) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      align-items: center;
+      gap: 67px;
+    }
+  }
+
+  &-subtitle {
+    margin: 0 0 16px;
+    font-size: 30px;
+
+    @media screen and (min-width: 1024px) {
+      font-size: 40px;
+    }
+  }
+
+  &-description {
+    margin: 0 0 60px;
+    font-size: 16px;
+    line-height: 1.5;
+    color: $gray-paragraph;
+  }
+
+  &-img {
+    width: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+
+    @media screen and (min-width: 1024px) {
+      order: -1;
+    }
+  }
+}
