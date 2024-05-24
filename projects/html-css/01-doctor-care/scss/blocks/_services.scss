@@ -1,0 +1,86 @@
+@import "../vars";
+@import "../mixins";
+
+.services {
+  padding-top: 300px;
+  padding-bottom: 100px;
+  background-color: $brand-beige;
+
+  @media screen and (min-width: 1024px) {
+    padding-top: 200px;
+  }
+
+  &-title,
+  &-subtitle {
+    text-align: center;
+  }
+
+  &-title {
+    margin: 0 0 16px;
+    color: $brand-green;
+    font-size: 24px;
+    text-transform: uppercase;
+    line-height: 1.5;
+  }
+
+  &-subtitle {
+    margin: 0 0 60px;
+    color: $gray-headline;
+    font-size: 30px;
+    line-height: 1.5;
+
+    @media screen and (min-width: 1024px) {
+      max-width: 500px;
+      margin: 0 auto 60px;
+      font-size: 40px;
+    }
+  }
+
+  &-list {
+    @include reset-list;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+
+    @media screen and (min-width: 1024px) {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+  }
+
+  &-item {
+    position: relative;
+    padding: 24px;
+    padding-top: 64px;
+    background-color: $pure-white;
+    border: 1px solid $brand-green-light;
+    border-radius: 6px;
+
+    &::before {
+      content: "";
+      width: 24px;
+      height: 24px;
+      position: absolute;
+      top: 24px;
+      left: 24px;
+      background-image: url("../images/check.svg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+    }
+
+    &-title {
+      margin: 0 0 16px;
+      font-size: 24px;
+      color: $gray-headline;
+    }
+
+    &-description {
+      margin: 0;
+      font-size: 16px;
+      line-height: 1.5;
+      color: $gray-paragraph;
+    }
+  }
+}

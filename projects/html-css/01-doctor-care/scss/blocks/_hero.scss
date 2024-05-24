@@ -105,6 +105,7 @@
     padding: 40px;
     background-color: $brand-beige;
     border-radius: 6px;
+    border: 1px solid $brand-green-light;
 
     @media screen and (min-width: 1024px) {
       display: grid;
@@ -133,7 +134,7 @@
           width: 1px;
           height: 60px;
           margin: 0 auto;
-          background-color: $brand-green;
+          background-color: $brand-green-light;
         }
 
         &:last-child::after {
